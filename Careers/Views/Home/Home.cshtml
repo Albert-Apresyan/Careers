@@ -1,0 +1,37 @@
+﻿@using Careers.DataAccess.ViewModels
+@using Microsoft.AspNetCore.Identity
+@model UserViewModel
+
+<link rel="stylesheet" href="~/css/Home.css" />
+
+<div class="container mt-5 mb-5">
+    <div class="row no-gutters">
+        <div class="col-md-4 col-lg-3"><img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-2.png" class = "profilePic"/></div>
+        <div class="col-md-8 col-lg-8">
+            <div class="d-flex flex-column ">
+                <div class="d-flex flex-row justify-content-between align-items-center p-5  text-white" style="background-color:#9B1F40">
+                    <h3 class="display-5">@Model.FirstName  @Model.LastName</h3>
+                    <a href = "https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href = "https://www.google.com/" target="_blank" style ="color:#B23121"><i class="fa fa-google"></i></a>
+                    <a href = "https://www.linkedin.com/" target="_blank"style ="color:#0A66C2"><i class="fa fa-linkedin"></i></a>
+                    <a href = "https://www.youtube.com/" target="_blank"style ="color:#c4302b "><i class="fa fa-youtube-play"></i></a>
+                </div>
+                <div class="d-flex flex-row text-white" >
+                    <div class="p-4 text-center skill-block" style="background-color:#9B1F40">
+                        <h5>@Model.Email</h5>
+                    </div>
+                    <div class="p-3 bg-dark text-center skill-block">
+                        <h5>@Model.RegistrationDate</h5>
+                    </div>
+                    <div class="p-3  text-center skill-block" style="background-color:#9B1F40 ">
+                        <h5>@Model.PostedJobsCount Job Posts</h5>
+                    </div>
+                    <div class="p-3 bg-dark text-center skill-block">
+                        <h5>@Model.AppliedJobsCount Applied Jobs</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

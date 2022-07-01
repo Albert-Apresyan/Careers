@@ -1,0 +1,12 @@
+﻿
+.profilePic {
+    border: 6px solid #9B1F40;
+    border-radius: 70%;
+    border-color: #9B1F40;
+    width: 80%;
+    height: 91%;
+}
+
+.skill-block {
+    width: 30%;
+}

@@ -1,0 +1,36 @@
+﻿@using Careers.DataAccess.ViewModels
+@using X.PagedList.Mvc;
+@using X.PagedList;
+@using X.PagedList.Mvc.Core
+@model StaticPagedList<JobPostsModel>
+
+
+
+<link rel="stylesheet" href="~/css/AllJobs.css" />
+
+
+<div class="container">
+    <h1 style="color:#9B1F40;text-align:center">All Jobs</h1>
+    <div class="row">
+        <div class="col ">
+            <div class="box">
+                <form name="search">
+                    <input type="text" id="jobSearch" name="jobSearch" placeholder="Search By Keywords" class="form-control"  />
+                </form>
+            </div>
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+            <select asp-for="@Model.First().IndustryTypeId" asp-items="(SelectList)ViewBag.Industries" class="form-control industries" style=" border: 4px solid #9B1F40;border-radius:20px;">
+                <option selected> Select Industry </option>
+            </select>
+            <input @ViewBag.itemid type="hidden" />
+        </div>
+    </div>
+    <br />
+    <div id="joblist">
+        <partial name="_JobsList"/>
+    </div>
+    <br />
+</div>

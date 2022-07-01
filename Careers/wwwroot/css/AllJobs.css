@@ -1,0 +1,140 @@
+﻿.applyDis {
+    background-color: #9B1F40;
+    border-radius: 100px;
+    color: white;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+a.applyDis:hover {
+    color: white;
+}
+
+a.More {
+    background-color: #9B1F40;
+    border-radius: 100px;
+    box-shadow: rgba(224, 193, 201) 0 -25px 18px -14px inset,rgba(224, 193, 201) 0 1px 2px,rgba(224, 193, 201) 0 2px 4px,rgba(224, 193, 201) 0 4px 8px,rgba(224, 193, 201) 0 8px 16px,rgba(224, 193, 201) 0 16px 32px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+a.apply {
+    background-color: #9B1F40;
+    border-radius: 100px;
+    box-shadow: rgba(224, 193, 201) 0 -25px 18px -14px inset,rgba(224, 193, 201) 0 1px 2px,rgba(224, 193, 201) 0 2px 4px,rgba(224, 193, 201) 0 4px 8px,rgba(224, 193, 201) 0 8px 16px,rgba(224, 193, 201) 0 16px 32px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+a.apply:hover {
+    box-shadow: rgba(196, 22, 68) 0 -25px 18px -14px inset,rgba(196, 22, 68) 0 1px 2px,rgba(196, 22, 68) 0 2px 4px,rgba(196, 22, 68) 0 4px 8px,rgba(196, 22, 68) 0 8px 16px,rgba(196, 22, 68) 0 16px 32px;
+}
+    a.More:hover {
+        box-shadow: rgba(196, 22, 68) 0 -25px 18px -14px inset,rgba(196, 22, 68) 0 1px 2px,rgba(196, 22, 68) 0 2px 4px,rgba(196, 22, 68) 0 4px 8px,rgba(196, 22, 68) 0 8px 16px,rgba(196, 22, 68) 0 16px 32px;
+    }
+
+
+
+table {
+    width: 100%;
+}
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+        /* Hide table headers (but not display: none;, for accessibility) */
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+    tr {
+        border: 1px solid #ccc;
+    }
+
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+        td:before {
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+        }
+        td:nth-of-type(1):after {
+            content: ": Title";
+        }
+        td:nth-of-type(2):after {
+            content: ": Description";
+        }
+        td:nth-of-type(3):after {
+            content: ": Posted Date";
+        }
+        td:nth-of-type(4):after {
+            content: ": Deadline";
+        }
+}
+
+
+#jobSearch {
+    padding: 10px;
+    width: 80px;
+    height: 40px;
+    background: none;
+    border: 4px solid #9B1F40;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifComic Sans MS;
+    font-size: 15px;
+    color: black;
+    outline: none;
+    transition: .5s;
+}
+
+.box:hover #jobSearch {
+    width: 200px;
+    background-color: white;
+    border-radius: 50px;
+} 

@@ -1,0 +1,70 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Careers</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="https://sf-tb-sg.ibytedtos.com/obj/ttfe-malisg/Helo/TikTok/header_icon_white.png"
+          type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-brand border-bottom  box-shadow mb-3" style="background-color:#9B1F40">
+            <div class="container">
+                <div class="align-content-center">
+                    <a class="navbar-brand" asp-controller="Home" asp-action="Index"><img src="https://sf-tb-sg.ibytedtos.com/obj/ttfe-malisg/Helo/TikTok/header_icon_white.png" style="width:70px;" /></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon text-light" ></span>
+                </button>
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between" id = "navbarSupportedContent">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-controller="Home" asp-action="Home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-controller="Job" asp-action="GetAllJobs">Search Job</a>
+                            </li>
+                        </ul>
+                    }
+                    <partial name="_LoginPartial"/>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - <img src="https://sf-tb-sg.ibytedtos.com/obj/ttfe-malisg/Helo/TikTok/header_icon_white.png" style="width:70px;" />
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/LogoutModal.js" asp-append-version="true"></script>
+    <script src="~/js/ProfileDropdown.js" asp-append-version="true"></script>
+    <script src="~/js/Job.js" asp-append-version="true"></script>
+    <script>
+        var JobFilterUrl = '@Url.Action("GetAllJobs", "Job")'
+        var JobViewUrl = '@Url.Action("ViewJob", "Job")'
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

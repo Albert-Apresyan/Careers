@@ -1,0 +1,59 @@
+﻿a.classname {
+    background-color: #9B1F40;
+    border-radius: 100px;
+    box-shadow: rgba(224, 193, 201) 0 -25px 18px -14px inset,rgba(224, 193, 201) 0 1px 2px,rgba(224, 193, 201) 0 2px 4px,rgba(224, 193, 201) 0 4px 8px,rgba(224, 193, 201) 0 8px 16px,rgba(224, 193, 201) 0 16px 32px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+    a.classname:hover {
+        box-shadow: rgba(196, 22, 68) 0 -25px 18px -14px inset,rgba(196, 22, 68) 0 1px 2px,rgba(196, 22, 68) 0 2px 4px,rgba(196, 22, 68) 0 4px 8px,rgba(196, 22, 68) 0 8px 16px,rgba(196, 22, 68) 0 16px 32px;
+    }
+a.classname1 {
+    background-color: rgba(80, 153, 38, 0.8);
+    border-radius: 100px;
+    box-shadow: rgba(142, 216, 128, 0.8) 0 -25px 18px -14px inset,rgba(142, 216, 128, 0.8) 0 1px 2px,rgba(142, 216, 128, 0.8) 0 2px 4px,rgba(142, 216, 128, 0.8) 0 4px 8px,rgba(142, 216, 128, 0.8) 0 8px 16px,rgba(142, 216, 128, 0.8) 0 16px 32px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+    a.classname1:hover {
+        box-shadow: rgba(75, 175, 56, 0.8) 0 -25px 18px -14px inset,rgba(75, 175, 56, 0.8) 0 1px 2px,rgba(75, 175, 56, 0.8) 0 2px 4px,rgba(75, 175, 56, 0.8) 0 4px 8px,rgba(75, 175, 56, 0.8) 0 8px 16px,rgba(75, 175, 56, 0.8) 0 16px 32px;
+    }
+.cards {
+    display: grid;
+    margin: 0 auto;
+    gap: 1rem;
+}
+@media (min-width: 670px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1100px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
